@@ -23,14 +23,14 @@ mutex = threading.Lock()
 
 '''use multi-thead to upload datasets'''
 parser = argparse.ArgumentParser()
-parser.add_argument("--trans", default=r"E:\ChineseSpeechCorpus\xutangx\all_wav.lst", help="transcript file")
-parser.add_argument("--src_prefix", default=r"E:\ChineseSpeechCorpus\xutangx\zxr", help="source sound file path prefix for current code")
-parser.add_argument("--remote_prefix", default=r"/data/local-files/?d=label-studio/data/xutangx/zxr", help="source sound file path prefix for server")
-parser.add_argument("--threads", default=1, help="number of threads u want to call")
-parser.add_argument("--project_prefix", default="学堂在线", help="本次上传所有项目的前缀")
-parser.add_argument("--projects", default="./projects.tsv", help="Projects file")
-parser.add_argument("--start", default=856675, help="start line number")
-parser.add_argument("--end", default=861675, help="end line number")
+parser.add_argument("--trans", default=r"E:\ChineseSpeechCorpus\xutangx\all_wav.lst", help="转录文本文件")
+parser.add_argument("--src_prefix", default=r"E:\ChineseSpeechCorpus\xutangx\zxr", help="本地音频源文件路径前缀")
+parser.add_argument("--remote_prefix", default=r"/data/local-files/?d=label-studio/data/xutangx/zxr", help="远端音频源文件路径前缀")
+parser.add_argument("--threads", default=1, help="同时上传线程数")
+parser.add_argument("--project_prefix", default="学堂在线", help="本次新建所有项目的前缀")
+parser.add_argument("--projects", default="./projects.tsv", help="要创建的项目主名称")
+parser.add_argument("--start", default=856675, help="音频文件起始行")
+parser.add_argument("--end", default=861675, help="音频文件结束行")
 args = parser.parse_args()
 
 def upload_thread(lines: list, log_file, projetc_id: int, project_name: str):
