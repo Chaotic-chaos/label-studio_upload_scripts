@@ -28,7 +28,7 @@ parser.add_argument("--src_prefix", default=r"E:\ChineseSpeechCorpus\xutangx\zxr
 parser.add_argument("--remote_prefix", default=r"/data/local-files/?d=label-studio/data/xutangx/zxr", help="远端音频源文件路径前缀")
 parser.add_argument("--threads", default=1, help="同时上传线程数")
 parser.add_argument("--project_prefix", default="学堂在线", help="本次新建所有项目的前缀")
-parser.add_argument("--projects", default="./projects.tsv", help="要创建的项目主名称")
+parser.add_argument("--projects", default="./test.tsv", help="要创建的项目主名称")
 parser.add_argument("--start", default=856675, help="音频文件起始行")
 parser.add_argument("--end", default=861675, help="音频文件结束行")
 args = parser.parse_args()
