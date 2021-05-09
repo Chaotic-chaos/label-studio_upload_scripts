@@ -68,7 +68,7 @@ def analyze_and_save(raw_res: list, output_path: str):
 
     if not os.path.exists(output_path):
         with open(output_path, "w+", encoding="utf-8") as out:
-            out.write("PATH\tSTART_TIME/END_TIME\tTRANSCRIPT")
+            out.write("PATH\tSTART_TIME/END_TIME\tTRANSCRIPT\n")
 
     with open(output_path, "a+", encoding="utf-8") as out:
         for elem in tqdm(raw_res, desc="[Analyzing]"):

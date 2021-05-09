@@ -1,5 +1,7 @@
 ## 一些为了[label-studio](https://github.com/heartexlabs/label-studio)写的脚本
 
+### 文件说明
+
 #### deve.py
 
 - 开发测试使用，忽略即可
@@ -37,3 +39,19 @@
       LABEL_CONFIG = "string" -> xml格式的项目预定义config，参考label-studio官方文档
       LOG_FILE = "string" -> 日志输出文件
   ```
+  
+### Usage
+
+#### 所有使用都必须进行的操作
+- 创建并定义上述`config.py`文件
+
+#### 上传待标记语料
+
+- 修改`main.py`文件中所示参数
+- 在同级目录下创建需要新建的项目名称tsv文件
+- `python main.py`等待执行完毕
+
+#### 导出已标记语料
+- 修改`export.py`中所示参数
+- 同级目录下创建包含项目id的tsv文件  
+- `python export.py`等待执行完毕
